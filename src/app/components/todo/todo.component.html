@@ -1,1 +1,38 @@
-<p>todo works!</p>
+<div class="wrapper">
+  <div class="title">
+    <h4>Task Manager</h4>
+    <span>
+      <button type="button" class="btn btn-primary">Add task</button>
+    </span>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Task Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>{{ todo.id }}</td>
+        <td>{{ todo.title }}</td>
+        <td>{{ todo.completed ? "Completed" : "Incomplete" }}</td>
+        <td>
+          <div class="button-container">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              [disabled]="todo.completed"
+            >
+              Check
+            </button>
+            <button type="button" class="btn btn-outline-success">Edit</button>
+            <button type="button" class="btn btn-outline-danger">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
