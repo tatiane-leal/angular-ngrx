@@ -1,4 +1,7 @@
 # AngularNgrx
+![FastAPI Logo](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png)
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
